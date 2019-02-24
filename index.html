@@ -13,10 +13,10 @@
 
 <body>
     <div class="jumbotron">
-        <header>
+        <header class="container">
             <h1>CrystalCollector!</h1>
         </header>
-        <container>
+        <div class="container">
             <p>You will be given a random number at the start of the game.</p>
             <p>There are four crystals below. By clicking on a crystal you will add a spacific amount of points to
                 yourtotal score.</p>
@@ -24,27 +24,35 @@
                 goes over the random number.</p>
             <p>The value of each crystal is hidden from you until you click on it.</p>
             <p>Each time the game starts, the game will change the values of each crystal.</p>
-        </container>
+        </div>
     </div>
-    <div id="randomNumber">
+    <div class="container">
+        <div id="randomNumber">
 
-    </div>
-    <div id="winsText">
-        <p>Wins: </p>
-    </div>
-    <div id="lossText">
-        <p>Losses: </p>
-    </div>
-    <div class="button">
-        <img src="assets/images/" id="crystalOne">
-        <img src="assets/images/" id="crystalTwo">
-        <img src="assets/images/" id="crystalThree">
-        <img src="assets/images/" id="crystalFour">
-    </div>
-    <div class="score">
-        <p>Your total score is: </p>
-        <div id="userScore">
+        </div>
+        <div class="wins">
+            <p>Wins: </p>
+            <div id="winsText">
 
+            </div>
+        </div>
+        <div class="losses">
+            <p>Losses: </p>
+            <div id="lossText">
+
+            </div>
+        </div>
+        <div class="button">
+            <img src="assets/images/green-crystal.jpg" id="crystalOne">
+            <img src="assets/images/white-crystal.jpg" id="crystalTwo">
+            <img src="assets/images/red-crystal.jpg" id="crystalThree">
+            <img src="assets/images/blue-crystal.jpg" id="crystalFour">
+        </div>
+        <div class="score">
+            <p>Your total score is: </p>
+            <div id="userScore">
+
+            </div>
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.js"

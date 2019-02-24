@@ -13,8 +13,7 @@ $(document).ready(function () {
     var wins = 0;
     var losses = 0;
 
-    $("#winsText").append(wins)
-    $("#lossText").append(losses)
+
 
     function reset() {
         numOne = Math.floor(Math.random() * 11 + 1);
@@ -22,9 +21,62 @@ $(document).ready(function () {
         numThree = Math.floor(Math.random() * 11 + 1);
         numFour = Math.floor(Math.random() * 11 + 1);
         userScore = 0;
+        random = Math.floor(Math.random() * 101 + 19);
+        $('#randomNumber').text(random);
     }
-    $("#crystalOne").click(function(){
-        
+    $("#crystalOne").click(function () {
+        userScore = userScore + numOne;
+        $("#userScore").text(userScore);
+        if (userScore === random) {
+            alert("You Win!");
+            wins++;
+            reset()
+        } else if (userScore > random) {
+            alert("You Lose!")
+            losses++;
+            reset()
+        }
     })
+    $("#crystalTwo").click(function () {
+        userScore = userScore + numTwo;
+        $("#userScore").text(userScore);
+        if (userScore === random) {
+            alert("You Win!");
+            wins++;
+            reset()
+        } else if (userScore > random) {
+            alert("You Lose!")
+            losses++;
+            reset()
+        }
+    })
+    $("#crystalThree").click(function () {
+        userScore = userScore + numThree;
+        $("#userScore").text(userScore);
+        if (userScore === random) {
+            alert("You Win!");
+            wins++;
+            reset()
+        } else if (userScore > random) {
+            alert("You Lose!")
+            losses++;
+            reset()
+        }
+    })
+    $("#crystalFour").click(function () {
+        userScore = userScore + numFour;
+        $("#userScore").text(userScore);
+        if (userScore === random) {
+            alert("You Win!");
+            wins++;
+            reset()
+        } else if (userScore > random) {
+            alert("You Lose!")
+            losses++;
+            reset()
+        }
+    })
+    $("#winsText").text(wins)
+    $("#lossText").text(losses)
 
 })
